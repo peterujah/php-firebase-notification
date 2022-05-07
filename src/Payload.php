@@ -6,7 +6,7 @@
  * @license     MIT public license
  */
 namespace Peterujah\NanoBlock\Firebase;
-class Push {
+class Payload {
     public const NODE_DATA = "data";
 	private $node;
 	private $payloadtype = 1;
