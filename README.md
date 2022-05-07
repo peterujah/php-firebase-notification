@@ -1,9 +1,9 @@
 A simple php class to help you send firebase push notification from php curl. 
 It will allow you to push cloud messaging through firebase in 3 different way.
  
-    1. Send to a single device id
-    2. Send to a multiple device ids
-    3. Send to a specific topic  subscribers
+   1. Send to a single device id
+   2. Send to a multiple device ids
+   3. Send to a specific topic  subscribers
 
 Installation
 
