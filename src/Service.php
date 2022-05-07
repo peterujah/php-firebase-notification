@@ -6,7 +6,7 @@
  * @license     MIT public license
  */
 namespace Peterujah\NanoBlock\Firebase;
-use \Peterujah\NanoBlock\Firebase\Payload;
+use \Peterujah\NanoBlock\Firebase\ServiceModel;
  class Service {
     public const SINGLE = "single";
     public const GROUP = "multiple";
@@ -17,11 +17,11 @@ use \Peterujah\NanoBlock\Firebase\Payload;
         $this->api_kay = $key;
     }
 
-    public function notifyAll(Payload $payload){
+    public function notifyAll(ServiceModel $payload){
         return $this->send((array) $payload->get(), self::GROUP);
     }
 
-    public function notify(Payload $payload){
+    public function notify(ServiceModel $payload){
         return $this->send((array) $payload->get(), self::SINGLE);
     }
 
