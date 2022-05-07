@@ -23,13 +23,7 @@ class ServiceModel {
 	* Holds notification broadcast type for topic
 	* @static bool 
 	*/
-	public const TOPIC = true;
-
-	/** 
-	* Holds notification broadcast type for registration_ids
-	* @static bool 
-	*/
-	public const IDS = false;
+	public const IS_TOPIC = true;
 
 	/** 
 	* Holds notification broadcast payload node|type
@@ -144,7 +138,7 @@ class ServiceModel {
 	*/
 	function __construct() {
 		$this->setNode(self::NODE_NOTIFICATION);
-		$this->setIsTopic(self::IDS);
+		$this->setIsTopic(!self::IS_TOPIC);
 		$this->setIsBackground(false);
 		$this->setReference(uniqid());
 	}
