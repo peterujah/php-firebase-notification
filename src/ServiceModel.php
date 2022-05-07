@@ -334,7 +334,7 @@ class ServiceModel {
 			if(is_array($this->to) && !$this->is_topic){
 				$request['registration_ids'] = (array) $this->to;
 			}else{
-				$request['to'] = $this->to ;
+				$request['to'] = ($this->is_topic ? "/topics/{$this->to}" : $this->to);
 			}
 			if($this->node != self::NODE_DATA){
 				$request['data']['title'] = $this->title;
