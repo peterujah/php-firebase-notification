@@ -64,3 +64,8 @@ Set the notification payload node type. The default is `ServiceModel::NODE_NOTIF
 ```php 
 $model->setNode(ServiceModel::NODE_NOTIFICATION | ServiceModel::NODE_DATA);
 ```
+
+Sets the notification to send to topic. The default is `false`, pass `ServiceModel::TOPIC` or `true`, to enable topic.
+```php
+$model->setIsTopic(ServiceModel::TOPIC);
+```
