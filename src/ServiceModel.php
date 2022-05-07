@@ -6,8 +6,11 @@
  * @license     MIT public license
  */
 namespace Peterujah\NanoBlock\Firebase;
-class Payload {
+class ServiceModel {
     public const NODE_DATA = "data";
+    public const NODE_NOTIFICATION = "notification";
+    public const TOPIC = true;
+    public const IDS = false;
 	private $node;
 	private $payloadtype = 1;
 	private $to;
@@ -16,7 +19,7 @@ class Payload {
 	private $body;
 	private $image = null;
 	private $data;
-	private $is_topic = false;
+	private $is_topic;
 	private $vibrate = 1;
 	private $sound = "default";
 	private $icon = null; 
@@ -29,7 +32,8 @@ class Payload {
 	private $is_background;
 
 	function __construct() {
-        $this->setNode(self::NODE_DATA);
+        $this->setNode(self::NODE_NOTIFICATION);
+        $this->setIsTopic(self::IDS);
 	}
 
 	public function setTo($to) {
@@ -130,7 +134,7 @@ class Payload {
 		$request = array();  
 		//if($this->payloadtype == 1){}
 		if(!empty($this->to)){
-			if(is_array($this->to) && $this->is_topic == false){
+			if(is_array($this->to) && !$this->is_topic){
 				$request['registration_ids'] = (array) $this->to;
 			}else{
 				$request['to'] = $this->to ;
