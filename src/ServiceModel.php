@@ -1,8 +1,8 @@
 <?php 
 /**
- * OBCompress - A simple php class to compress output buffer
+ * Service - Send firebase device push notification from php curl
  * @author      Peter Chigozie(NG) peterujah
- * @copyright   Copyright (c), 2021 Peter(NG) peterujah
+ * @copyright   Copyright (c), 2022 Peter(NG) peterujah
  * @license     MIT public license
  */
 namespace Peterujah\NanoBlock\Firebase;
