@@ -27,7 +27,6 @@ Sending a message to a single device id can be done like this.
 $model->setTo("f-bbVq2uCgY:APA91bF0s7jk5lXXy");
 $model->setTitle("I code it here");
 $model->setMessage("Will you like to join us?");
-$model->setIsBackground(false);
 $response = $service->notify($model);
 var_export($response);
 ```
@@ -38,7 +37,6 @@ Sending a message to a multiple user IDs can be done like this
 $model->setTo(array("User-A", "User-B", "User-C"));
 $model->setTitle("I code it here");
 $model->setMessage("Will you like to join us?");
-$model->setIsBackground(false);
 $response = $service->notify($model);
 var_export($response);
 ```
@@ -50,7 +48,6 @@ $model->setIsTopic(ServiceModel::TOPIC);
 $model->setTo("TOPIC_GROUP_ID_NAME");
 $model->setTitle("I code it here");
 $model->setMessage("Will you like to join us?");
-$model->setIsBackground(false);
 $response = $service->notify($model);
 var_export($response);
 ```
