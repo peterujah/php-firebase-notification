@@ -1,12 +1,12 @@
 <?php 
 /**
- * Service - Send firebase device push notification from php curl
+ * FirebaseServiceModel - Send firebase device push notification from php curl
  * @author      Peter Chigozie(NG) peterujah
  * @copyright   Copyright (c), 2022 Peter(NG) peterujah
  * @license     MIT public license
  */
-namespace Peterujah\NanoBlock\Firebase;
-class ServiceModel {
+namespace Peterujah\NanoBlock;
+class FirebaseServiceModel {
 	/** 
 	* Holds notification payload type [data]
 	* @static string 
@@ -136,7 +136,7 @@ class ServiceModel {
 	/** 
 	* Constructor
 	*/
-	function __construct() {
+	public function __construct() {
 		$this->setNode(self::NODE_NOTIFICATION);
 		$this->setIsTopic(!self::IS_TOPIC);
 		$this->setIsBackground(false);
@@ -146,7 +146,7 @@ class ServiceModel {
 	/** 
 	* Sets registration ids or topic 
 	* @param string $to
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setTo($to) {
 		$this->to = $to;
@@ -156,7 +156,7 @@ class ServiceModel {
 	/** 
 	* Sets notification payload node
 	* @param string $node
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setNode($node) {
 		$this->node = $node;
@@ -166,7 +166,7 @@ class ServiceModel {
 	/** 
 	* Sets notification title
 	* @param string $title
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setTitle($title) {
 		$this->title = $title;
@@ -176,7 +176,7 @@ class ServiceModel {
 	/** 
 	* Sets notification message
 	* @param string $message
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setMessage($message) {
 		$this->message = $message;
@@ -186,7 +186,7 @@ class ServiceModel {
 	/** 
 	* Sets notification message body
 	* @param string $body
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setBody($body) {
 		$this->body = $body;
@@ -196,7 +196,7 @@ class ServiceModel {
 	/** 
 	* Sets notification image url
 	* @param string $url
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setImage($url) {
 		$this->image = $url;
@@ -206,7 +206,7 @@ class ServiceModel {
 	/** 
 	* Sets notification vibration stats
 	* @param int $vibrate
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setVibrate($vibrate) {
 		$this->vibrate = $vibrate;
@@ -216,7 +216,7 @@ class ServiceModel {
 	/** 
 	* Sets notification sound type
 	* @param string $sound
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setSound($sound) {
 		$this->sound = $sound;
@@ -226,7 +226,7 @@ class ServiceModel {
 	/** 
 	* Sets notification icon type
 	* @param string $icon
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setIcon($icon) {
 		$this->icon = $icon;
@@ -236,7 +236,7 @@ class ServiceModel {
 	/** 
 	* Sets notification priority
 	* @param string $priority
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setPriority($priority) {
 		$this->priority = $priority;
@@ -246,7 +246,7 @@ class ServiceModel {
 	/** 
 	* Sets notification background state
 	* @param bool $allow
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setIsBackground($allow) {
 		$this->is_background = $allow;
@@ -256,7 +256,7 @@ class ServiceModel {
 	/** 
 	* Sets notification topic enable state
 	* @param bool $allow
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setIsTopic($allow) {
 		$this->is_topic = $allow;
@@ -266,7 +266,7 @@ class ServiceModel {
 	/** 
 	* Sets notification click action
 	* @param string $click
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setClickAction($click) {
 		$this->click_action = $click;
@@ -276,7 +276,7 @@ class ServiceModel {
 	/** 
 	* Sets notification link
 	* @param string|url $link
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setLink($link) {
 		$this->url = $url;
@@ -286,7 +286,7 @@ class ServiceModel {
 	/** 
 	* Sets notification broadcast id
 	* @param string $id
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setBroadcast($id) {
 		$this->broadcast = $id;
@@ -296,17 +296,17 @@ class ServiceModel {
 	/** 
 	* Sets notification reference id
 	* @param string $ref
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setReference($ref) {
-		$this->reference = $reference;
+		$this->reference = $ref;
 		return $this;
 	}
 
 	/** 
 	* Sets notification badge code
 	* @param int $badge
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setBadge($badge) {
 		$this->badge = $badge;
@@ -316,7 +316,7 @@ class ServiceModel {
 	/** 
 	* Sets notification additional meta
 	* @param array $meta
-	* @return ServiceModel|object class instance
+	* @return FirebaseServiceModel|object class instance
 	*/
 	public function setMeta($meta) {
 		$this->meta = $meta;
