@@ -16,9 +16,12 @@ composer require peterujah/php-firebase-notification
 initialize the firebase class with your google api key
 
 ```php
+use Peterujah\NanoBlock\FirebaseServiceModel;
+use Peterujah\NanoBlock\FirebaseService;
+
 define("GOOGLE_FCM_API_KEY", "AAAAtXpvsYU:APXXX");
-$model = new \Peterujah\NanoBlock\Firebase\ServiceModel();
-$service = new \Peterujah\NanoBlock\Firebase\Service(GOOGLE_FCM_API_KEY);
+$model = new FirebaseServiceModel();
+$service = new FirebaseService(GOOGLE_FCM_API_KEY);
 ```
 
 Sending a message to a single device id can be done like this.
@@ -65,10 +68,11 @@ Sets the notification to send to topic. The default is `false`, pass `ServiceMod
 $model->setIsTopic(ServiceModel::TOPIC);
 ```
 
+Sets the notification body, default is message
 ```php
 $model->setBody($body);
 ```
-
+Sets notification image url
 ```php
 $model->setImage("https://img.com/path/to/foo.png");
 ```
