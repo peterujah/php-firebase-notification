@@ -47,7 +47,7 @@ var_export($response);
  Sending a message by topic IDs/name can be done like this
 
 ```php
-$model->setIsTopic(ServiceModel::TOPIC);
+$model->setIsTopic(FirebaseServiceModel::TOPIC);
 $model->setTo("TOPIC_GROUP_ID_NAME");
 $model->setTitle("I code it here");
 $model->setMessage("Will you like to join us?");
@@ -57,15 +57,15 @@ var_export($response);
 
 Methods
 
-Set the notification payload node type. The default is `ServiceModel::NODE_NOTIFICATION`
+Set the notification payload node type. The default is `FirebaseServiceModel::NODE_NOTIFICATION`
 
 ```php 
-$model->setNode(ServiceModel::NODE_NOTIFICATION | ServiceModel::NODE_DATA);
+$model->setNode(FirebaseServiceModel::NODE_NOTIFICATION | FirebaseServiceModel::NODE_DATA);
 ```
 
-Sets the notification to send to topic. The default is `false`, pass `ServiceModel::TOPIC` or `true`, to enable topic.
+Sets the notification to send to topic. The default is `false`, pass `FirebaseServiceModel::TOPIC` or `true`, to enable topic.
 ```php
-$model->setIsTopic(ServiceModel::TOPIC);
+$model->setIsTopic(FirebaseServiceModel::TOPIC);
 ```
 
 Sets the notification body, default is message
