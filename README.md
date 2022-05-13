@@ -72,35 +72,36 @@ Sets the notification body, default is message
 ```php
 $model->setBody($body);
 ```
-Sets notification image url
+Sets the notification image url.
 ```php
 $model->setImage("https://img.com/path/to/foo.png");
 ```
 
+Sets the notification click action for android.
 ```php
 $model->setClickAction($click);
 ```
 
+Sets the notification refernce for custom use.
 ```php
 $model->setReference($ref);
 ```
 
-```php
-$model->setBroadcast($id);
-```
-
+Sets the notification additional meta data for custom use.
 ```php
 $model->setMeta($array);
 ```
 
+Sets the notification badge id.
 ```php
 $model->setBadge($int);
 ```
 
+Sets the notification background state.
 ```php
 $model->setIsBackground($bool);
 ```
-
+Sets the notification sound type.
 ```php
 $model->setSound($sound);
 ```
