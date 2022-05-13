@@ -1,13 +1,13 @@
 <?php 
 /**
- * Service - Send firebase device push notification from php curl
+ * FirebaseService - Send firebase device push notification from php curl
  * @author      Peter Chigozie(NG) peterujah
  * @copyright   Copyright (c), 2022 Peter(NG) peterujah
  * @license     MIT public license
  */
-namespace Peterujah\NanoBlock\Firebase;
-use \Peterujah\NanoBlock\Firebase\ServiceModel;
- class Service {
+namespace Peterujah\NanoBlock;
+use \Peterujah\NanoBlock\FirebaseServiceModel;
+ class FirebaseService {
 	/** 
 	* Holds notification broadcast type [single]
 	* @static string 
@@ -43,19 +43,19 @@ use \Peterujah\NanoBlock\Firebase\ServiceModel;
 
 	/** 
 	* Sends notification to all users
-	* @param ServiceModel $payload
+	* @param FirebaseServiceModel $payload
 	* @return response|object|array response from google firebase service
 	*/
-	public function notifyAll(ServiceModel $payload){
+	public function notifyAll(FirebaseServiceModel $payload){
 		return $this->send((array) $payload->get(), self::GROUP);
 	}
 
 	/** 
 	* Sends notification to a single user
-	* @param ServiceModel $payload
+	* @param FirebaseServiceModel $payload
 	* @return response|object|array response from google firebase service
 	*/
-	public function notify(ServiceModel $payload){
+	public function notify(FirebaseServiceModel $payload){
 		return $this->send((array) $payload->get(), self::SINGLE);
 	}
 
